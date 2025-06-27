@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/history.html">History and Evolution</a></li>
+                <li><a href="/messaging.html">HTTP Messages</a></li>
+                <li><a href="/resources.html">My Sources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="history-section">
+            <div id="history-1">
+                <h2>HTTP History</h2>
+                <p>This section will cover the history of HTTP, including its beginnings and key milestones. Here we
+                    will
+                    also
+                    discuss how HTTP has evolved over time, including the major changes and updates that came with each
+                    new
+                    version of it.</p>
+            </div>
+            <div id="history-2">
+                <h2>Where it all began</h2>
+                <p>A man named Tim Berners-Lee and his team created a hypertext system initially called Mesh, but later
+                    renamed the World Wide Web, more commonly known by its acronym WWW. HTTP was one of the four
+                    fundamental
+                    aspects of the World Wide Web, along with Hypertext Markup Language (HTML), WWW, and a server that
+                    allowed access to the document such as HTTPD (Evolution of HTTP - HTTP | MDN, n.d.) . </p>
+                <img src="images/tim berners lee.jpg" alt="tim berners lee">
+                <h2>Evolution</h2>
+                <h4>HTTP/0.9</h4>
+                <p>The very first version of HTTP was called HTTP/0.9, also known as the one-line protocol. In this
+                    version
+                    of HTTP, requests consisted of a single line and started with the only possible method (GET)
+                    followed by
+                    the path to the resource, and there was no use of URLs or headers (Evolution of HTTP - HTTP | MDN,
+                    n.d.).</p>
+                <h4>HTTP/1.0</h4>
+                <p>After this came HTML/1.0, and while it was still very limited, its usage of browsers and servers made
+                    it
+                    more flexible. This was also when status codes and headers were introduced, and thanks to the use of
+                    headers, non-HTML files could be transmitted.</p>
+                <h4>HTTP/1.1</h4>
+                <p> In HTTP/1.1, the following version, connections could now be reused and cache control mechanisms and
+                    content negotiation were introduced (Evolution of HTTP - HTTP | MDN, n.d.). </p>
+                <h4>HTTP/2</h4>
+                <p>In the early 2010s, SPDY, an experimental protocol introduced by Google increased responsiveness and
+                    was
+                    the start of the creation of the HTTP/2 protocol. HTTP/2 was a binary protocol, meaning it cannot be
+                    read and created manually (Evolution of HTTP - HTTP | MDN, n.d.).</p>
+                <p>It was also a multiplexed protocol meaning that multiple messages and data could be sent at the same
+                    time
+                    over a single connection. The usage of HTTP/2 peaked in January 2022 (Usage Statistics of HTTP/2 for
+                    Websites, n.d.). </p>
+                <h4>HTTP/3</h4>
+                <p>HTTP/3, the most recent HTTP protocol, does not have a specific release date. It was officially
+                    standardized by the IETF, also known as the Internet Engineering Task Force, in 2022.</p>
+                <p>HTTP/3, unlike previous HTTP protocols, is built on QUIC instead of TCP/IP. QUIC is built on UDP,
+                    which
+                    is short for User Datagram Protocol.</p>
+                <p>UDP does not require a connection to be used, which makes it so that QUIC connects faster. Because of
+                    this it is more reliable, more secure, and quicker than its previous counterparts (What Is HTTP/3,
+                    and
+                    Should You Enable It?, 2023).
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>This is a project for my</span> <a href="https://ksuweb.github.io/IT3203/">IT 3203</a><span> class.</span>
+    </footer>
+
+</body>
+
+</html>

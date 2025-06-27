@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/history.html">History and Evolution</a></li>
+                <li><a href="/messaging.html">HTTP Messages</a></li>
+                <li><a href="/resources.html">My Sources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="messaging-section">
+        <div id="messaging-1">
+            <h2>HTTP Messages</h2>
+            <p>This section will cover the HTTP messaging system, including how messages are structured and how they are
+                used to
+                communicate between clients and servers. We will also discuss the different types of messages and their
+                purposes.</p>
+        </div>
+        <div id="messaging-2">
+            <h2>What is the HTTP messaging cycle?</h2>
+            <p>HTTP consists of two types of messages: a request and response. These messages occur in a cycle called
+                the
+                request-response cycle.</p>
+            <img src="images/requestresponse.png" alt="request-response cycle">
+            <h2>Request</h2>
+            <p>The cycle starts with a client sending an HTTP request to the server. In order to make a request, it must
+                contain a URL, HTTP method, headers, and a request body.</p>
+            <p> According to freecodedcamp.org, “A request contains information about the requested source and other
+                parameters.”
+                After the server receives the client’s request, it must process it before sending a response back to the
+                client. </p>
+            <div id="msg-sub">
+                <h4>Headers</h4>
+                <span>Headers carry additional information about a request or a response, and have a name/value
+                    format.</span>
+            </div>
+            <h2>Response</h2>
+            <p> An HTTP response consists of a status line, headers, and a message body. </p>
+            <p> Once the client receives the message, it renders the content and displays it using either a web browser
+                or a
+                web application.
+            </p>
+            <div id="msg-sub2">
+                <h4>Status Line</h4>
+                <span>According to </span><a href="cloudfare.com">cloudfare.com</a>
+                <span>, the status line consists of a status code that indicates the outcome of the
+                    request and a corresponding message. An example of a status code users commonly run into is the “404
+                    not
+                    found” error. There are five different status code blocks: informational (1xx), success (2xx),
+                    redirection
+                    (3xx), client error (4xx), and server error (5xx) (Jain, n.d.). The “xx” are numbers between 00 and
+                    99
+                    (HTTP/2 to Origin · Cloudflare Speed Docs, 2025).</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>This is a project for my</span> <a href="https://ksuweb.github.io/IT3203/">IT 3203</a><span> class.</span>
+    </footer>
+</body>
+
+
+</html>

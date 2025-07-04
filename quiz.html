@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Site - Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/history.html">History and Evolution</a></li>
+                <li><a href="/messaging.html">HTTP Messages</a></li>
+                <li><a href="/resources.html">My Sources</a></li>
+                <li><a href="/quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="quiz-container">
+        <h1>HTTP Quiz</h1>
+        <form id="quiz-form">
+            <!--Multiple choice-->
+            <div class="question active">
+                <h2>What is the purpose of HTTP?</h2>
+                <label><input type="radio" name="q1" value="a"> a. To transfer hypertext documents over the
+                    internet</label><br>
+                <label><input type="radio" name="q1" value="b"> b. Creates structure for a webpage </label><br>
+                <label><input type="radio" name="q1" value="c"> c. To send emails</label><br>
+                <label><input type="radio" name="q1" value="d"> d. To manage databases</label><br>
+                <button type="button" onClick="nextQuestion()">Next</button><br>
+            </div>
+
+            <!--Multiple choice-->
+            <div class="question">
+                <h2>What was the very first version of HTTP?</h2>
+                <label><input type="radio" name="q2" value="a"> a. HTTP/1.0</label><br>
+                <label><input type="radio" name="q2" value="b"> b. HTTP/0.8 </label><br>
+                <label><input type="radio" name="q2" value="c"> c. HTTP/0.9</label><br>
+                <label><input type="radio" name="q2" value="d"> d. HTTP/0</label><br>
+                <button type="button" onClick="nextQuestion()">Next</button>
+            </div>
+
+            <!--Multiple choice-->
+            <div class="question">
+                <h2>What are the parts of the HTTP messaging cycle?</h2>
+                <label><input type="radio" name="q3" value="a"> a. Request and response</label><br>
+                <label><input type="radio" name="q3" value="b"> b. Database and Server </label><br>
+                <label><input type="radio" name="q3" value="c"> c. Server and client</label><br>
+                <label><input type="radio" name="q3" value="d"> d. Web and Internet</label><br>
+                <button type="button" onClick="nextQuestion()">Next</button>
+            </div>
+
+            <!--Multiple choice-->
+            <div class="question">
+                <h2>What is an HTTP request?</h2>
+                <label><input type="radio" name="q4" value="a"> a. A message with a name/value format </label><br>
+                <label><input type="radio" name="q4" value="b"> b. A message sent by a client to a server</label><br>
+                <label><input type="radio" name="q4" value="c"> c. A message sent by a server to a client</label><br>
+                <label><input type="radio" name="q4" value="d"> d. A message sent by a database to a server</label><br>
+                <button type="button" onClick="nextQuestion()">Next</button>
+            </div>
+
+            <!--Fill in the blank-->
+            <div class="question">
+                <h2>HTTP is an acronym for what?</h2>
+                <input type="text" class="text-input" name="q5" placeholder="Type your answer here">
+                <br><br>
+                <button type="button" onClick="nextQuestion()">Next</button>
+
+            </div>
+
+            <!--Multiple choice-->
+            <div class="question">
+                <h2>What is the most recent version of HTTP?</h2>
+                <label><input type="radio" name="q6" value="a"> a. HTTP/1.0</label><br>
+                <label><input type="radio" name="q6" value="b"> b. HTTP/2.0</label><br>
+                <label><input type="radio" name="q6" value="c"> c. HTTP/3.5</label><br>
+                <label><input type="radio" name="q6" value="d"> d. HTTP/3.0</label><br>
+                <button type="button" onClick="nextQuestion()">Next</button>
+            </div>
+
+            <!--Multi-correct question-->
+            <div class="question">
+                <h2>Which ones are features of an HTTP request?</h2>
+                <label><input type="checkbox" name="q7" value="IP address"> a. IP address</label><br>
+                <label><input type="checkbox" name="q7" value="Header"> b. Header</label><br>
+                <label><input type="checkbox" name="q7" value="URL"> c. URL</label><br>
+                <label><input type="checkbox" name="q7" value="Request body"> d. Request body</label><br>
+                <br><button type="button" onClick="gradeQuiz()">Submit</button>
+            </div>
+
+        </form>
+
+        <div class="result-wrapper hidden" id="resultContainer">
+            <h2>Results</h2>
+            <p id="finalScore"></p>
+            <ul id="detailedResults"></ul>
+            <p id="passFail"></p>
+            <button onClick="restartQuiz()">Restart Quiz?</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

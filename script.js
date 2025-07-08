@@ -104,3 +104,13 @@ function restartQuiz() {
     currentQuestion = 0;
     questions[0].classList.add("active");
 }
+
+//nav bar js
+function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}

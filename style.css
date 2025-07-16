@@ -5,6 +5,11 @@
     font-family: "DM Sans", sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 
 /*navigation styling*/
 
@@ -67,9 +72,25 @@ nav ul li a:hover {
 #home,
 #history,
 #messaging,
-#key-terms {
+#key-terms,
+#two-column,
+#contents {
     margin: 20px 40px 40px 40px;
     padding: 10px 20px 20px 40px;
+}
+
+#history-1 h2,
+#messaging-1 h2,
+#resources-1 h2 {
+    color: rgb(27, 140, 197);
+
+}
+
+#home img,
+#messaging-2 img {
+    width: 50%;
+    height: auto;
+    border-radius: 0px;
 }
 
 p {
@@ -77,41 +98,87 @@ p {
 }
 
 h1 {
-    margin: 20px 20px 40px 0px;
+    margin: 20px 20px 0px 0px;
     padding: 10px 20px 20px 0px;
-    font-size: 36px;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.6;
 }
 
-h4 {
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h3 {
     font-size: 20px;
 }
 
+h4 {
+    font-size: 18px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #808080;
+    margin: 40px 0;
+    display: block;
+    width: 100%;
+}
 
 /*home styling*/
 #home {
     display: flex;
     flex-direction: row;
+    padding: 40px;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: rgb(206, 213, 241);
-    border-radius: 20px;
-    padding: 40px;
     line-height: 1.4;
-    margin: 20px 40px 40px 40px;
+    margin: 20px 20px 100px 20px;
 }
 
-#home p {
-    font-size: 30px;
+#home h2 {
+    font-weight: 500;
 }
 
+h1 {
+    color: rgb(27, 140, 197);
+}
 
+#home-content {
+    margin-bottom: 40px;
+    background-color: rgb(27, 140, 197);
 
-#home img {
-    width: 50%;
-    height: auto;
+}
+
+#two-column {
+    display: flex;
+    color: white;
+    gap: 20px;
+
+}
+
+#home-content p {
+    margin-top: 20px;
+}
+
+#column {
+    flex: 1;
+    margin-bottom: 40px;
+}
+
+#contents {
+    margin: 40px 40px 20px 40px;
+    color: white;
 }
 
 /*key terms styling*/
+
+#key-terms {
+    margin-top: 100px;
+}
 
 #key-terms table,
 th,
@@ -167,7 +234,6 @@ h4 {
     width: 50%;
     height: auto;
     border-style: solid;
-    border-radius: 20px;
     border-width: 1px;
 }
 
@@ -187,10 +253,7 @@ h4 {
 #messaging-1,
 #resources-1,
 #history-1 {
-    display: grid;
-    background-color: rgb(206, 213, 241);
-    border-radius: 20px;
-    padding: 40px 40px 40px 20px;
+    padding: 40px 40px 40px 0px;
     line-height: 1.5;
 }
 
@@ -223,7 +286,7 @@ span {
 #resources-2 li {
     margin: 10px 20px 10px 20px;
     padding: 10px 20px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 /*footer styling*/
@@ -329,14 +392,53 @@ button {
 
 /*responsive design*/
 /*small devices*/
-@media (max-width: 575.98px) {
+@media (min-width: 575.98px) {
+    #home {
+        flex-direction: column;
+    }
+
+    #home-content,
+    #two-column {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
     .sidebar {
         width: 100%;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #key-terms table,
+    th,
+    td {
+        font-size: 14px;
     }
 }
 
 
-@media (max-width: 768px) {
+/*medium devices (tablets)*/
+@media (min-width: 768px) {
 
     .hideOnMobile {
         display: none;
@@ -366,5 +468,108 @@ button {
     nav ul li a {
         display: block;
         padding: 6px 10px;
+    }
+
+    #key-terms table,
+    th,
+    td {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #resources-2 li {
+        font-size: 16px;
+    }
+
+}
+
+/*large devices (desktops)*/
+@media (min-width: 1024px) {
+    #home {
+        flex-direction: row;
+    }
+
+    #two-column {
+        flex-direction: row;
+    }
+
+    .hideOnMobile {
+        display: block;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li a {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 20px
+    }
+}
+
+/*x-large devices (large desktops)*/
+@media (min-width: 1200px) {
+    .hideOnMobile {
+        display: block;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li a {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    #key-terms table,
+    th,
+    td {
+        font-size: 24px;
     }
 }

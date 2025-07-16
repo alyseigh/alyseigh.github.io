@@ -27,7 +27,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(0, 0, 0);
+    color: rgb(102, 102, 102);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -392,7 +392,7 @@ button {
 
 /*responsive design*/
 /*small devices*/
-@media (min-width: 575.98px) {
+@media (min-width: 480px) {
     #home {
         flex-direction: column;
     }
@@ -527,49 +527,10 @@ button {
     p {
         font-size: 20px
     }
-}
-
-/*x-large devices (large desktops)*/
-@media (min-width: 1200px) {
-    .hideOnMobile {
-        display: block;
-    }
-
-    .menu-button {
-        display: none;
-    }
-
-    nav {
-        flex-direction: row;
-    }
-
-    nav ul {
-        flex-direction: row;
-    }
-
-    nav ul li a {
-        padding: 20px;
-    }
-
-    p {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 30px;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    h3 {
-        font-size: 30px;
-    }
 
     #key-terms table,
     th,
     td {
-        font-size: 24px;
+        font-size: 20px;
     }
 }

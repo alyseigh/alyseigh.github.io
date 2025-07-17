@@ -392,7 +392,7 @@ button {
 
 /*responsive design*/
 /*small devices*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 400px) {
     #home {
         flex-direction: column;
     }
